@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Babylon Project</title>
+
+    <style>
+      html,
+      body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #renderCanvas {
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+      #transcriptText {
+        font-family: 'Roboto Serif', serif;
+        font-style: italic;
+        font-weight: bold;
+        margin: 0.8em 0 0 0;
+        color: white;
+      }
+      #userMessageContainer {
+        position: absolute;
+        bottom: 40vh;
+        left: 0;
+        right: 0;
+        display: none; /* Default to non-visible */
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+      }
+      #userMessageContainer.showingMessage {
+          display: flex;
+      }
+      .label{
+        font-weight: bold;
+        color:  white;
+      }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+
+    <script type="text/javascript" src="https://sdk.amazonaws.com/js/aws-sdk-2.1204.0.min.js"></script>
+    <script type="text/javascript" src="js/dist/aws-lex-audio.min.js"></script>
+    <script type="text/javascript" src="js/lib/host.babylon.js"></script>
+    <script src="js/main.js" type="module"></script>
+
+  </head>
+
+  <body>
+    
+    <!--<div id="loadScreen" class="screen">
+    <img class="logo" src="assets/images/load_screen.png">
+    <div id="loader"></div-->
+
+    <canvas id="renderCanvas" touch-action="none"></canvas>
+
+    <div id="ui2d">
+      <div class="buttonBar">
+        <div id="talkButton" class="iconButton">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="buttonFace">
+            <img class="icon" draggable="false" src="assets/images/mic_icon.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="userMessageContainer" class="noChildPointerEvents">
+            <div class="messageBox">
+              <div id="transcriptDisplay" class="message">
+                <div class="label">The chatbot thinks you said...</div>
+                <p id="transcriptText">
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+
+    
+  </div>
+    <!-- touch-action="none" for best results from PEP -->
+
+    <script>
+     /* const canvas = document.getElementById("renderCanvas"); // Get the canvas element
+      const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
+
+      // Add your code here matching the playground format
+
+      const scene = createScene(); //Call the createScene function
+
+      // Register a render loop to repeatedly render the scene
+      engine.runRenderLoop(function () {
+        scene.render();
+      });
+
+      // Watch for browser/canvas resize events
+      window.addEventListener("resize", function () {
+        engine.resize();
+      });*/
+    </script>
+  </body>
+</html>
