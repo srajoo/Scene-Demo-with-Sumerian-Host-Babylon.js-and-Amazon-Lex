@@ -22,7 +22,8 @@ let transcriptTextEl;
 configureAwsSdk();
 init3dEngine();
 await loadScene();
-startScene2();
+startScene1();
+
 
 function configureAwsSdk() {
   AWS.config.region = 'us-east-1'; // Region
@@ -108,14 +109,14 @@ async function startScene2()
         host2.TextToSpeechFeature.play('Remember Max from that party we went to, I just spent the day with him');
         host3.AnimationFeature.playAnimation('Gesture', 'Idle');
         host2.AnimationFeature.playAnimation('Gesture', 'Talk');
-    }, 17000);
+    }, 18000);
 
   setTimeout(function()
     {
          host3.TextToSpeechFeature.play('Max who spent the entire time flirting with you? Why did you do that?');
     host3.AnimationFeature.playAnimation('Gesture', 'Talk');
     host2.AnimationFeature.playAnimation('Gesture', 'Idle');
-    },20500 );
+    },21500 );
 
   setTimeout(function()
     {
@@ -129,7 +130,7 @@ async function startScene2()
         host3.TextToSpeechFeature.play('Dont take that tone with me. You are always doing this, never taking my feelings into consideration');
     host3.AnimationFeature.playAnimation('Gesture', 'Argue');
     host2.AnimationFeature.playAnimation('Gesture', 'Idle');
-    }, 29500 );
+    }, 26500 );
 
   setTimeout(function()
     {
@@ -147,68 +148,68 @@ async function startScene2()
 
   setTimeout(function()
     {
-        host3.owner.position = new BABYLON.Vector3(-9, 0, 5);
-      host3.AnimationFeature.playAnimation('Gesture', 'Argue');
+      host3.owner.position = new BABYLON.Vector3(-9, 0, 5);
+      host3.AnimationFeature.playAnimation('Gesture', 'Idle');
       host3.TextToSpeechFeature.play("Listen to me. You are my wife, you live under my roof, you listen to what I say.");
-    }, 44500);
+    }, 39000);
 
   setTimeout(function()
     {
         host2.AnimationFeature.playAnimation('Gesture', 'Argue');
       host2.TextToSpeechFeature.play("Youre not the boss of me. You cant keep telling me what to do. I will do what I want");
       host3.AnimationFeature.playAnimation('Gesture', 'Idle');
-    }, 45200);
+    }, 43200);
 
   setTimeout(function()
     {
         host2.AnimationFeature.playAnimation('Gesture', 'Idle');
-      host3.TextToSpeechFeature.play("Do you really think you can talk to me that way and get away with it?");
-    }, 52200);
+        host3.TextToSpeechFeature.play("Do you really think you can talk to me that way and get away with it?");
+    }, 48200);
 
   setTimeout(function()
     {
         host2.TextToSpeechFeature.play("What? What will you do? Pout around all day?");
-    }, 57200);
+    }, 50200);
 
   setTimeout(function()
     {
         host3.TextToSpeechFeature.play("Dont push me");
-    }, 62200);
+    }, 51200);
   setTimeout(function()
     {
         host2.TextToSpeechFeature.play("You wont do anything. You are just an insecure little man");
         
-    },66200 );
+    },52000 );
 
   setTimeout(function()
     {
       host3.TextToSpeechFeature.play("I SAID DONT PUSH ME");
-        host3.AnimationFeature.playAnimation('Gesture', 'Attack');
+      host3.AnimationFeature.playAnimation('Gesture', 'Attack');
         
-    }, 68200);
+    }, 53000);
 
   setTimeout(function()
     {
         host2.AnimationFeature.playAnimation('Gesture', 'Knocked');
-    }, 71200);
+    }, 54000);
   setTimeout(function()
     {
         host2.owner.position = new BABYLON.Vector3(-6.5, 0, 5);
         host2.owner.rotate(BABYLON.Vector3.Up(), -Math.PI);
         host3.AnimationFeature.playAnimation('Gesture', 'Idle');
         host2.AnimationFeature.playAnimation('Gesture', 'Up');
-    }, 71600);
+    }, 61600);
   setTimeout(function()
     {
       host2.AnimationFeature.playAnimation('Gesture', 'Cry');
       host.TextToSpeechFeature.play("The scene is complete. Please press Scene Complete");
    
-    },74100 );
+    },64100 );
 
   setTimeout(function()
     { 
         startApp();  
-    }, 84100);
+    }, 70100);
 }
 
 function startApp()
